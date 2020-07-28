@@ -1,0 +1,27 @@
+
+body#layout .hidden,
+body#layout .invisible {
+display: inherit;
+}
+body#layout .centered-bottom {
+position: relative;
+}
+body#layout .section.featured-post,
+body#layout .section.main,
+body#layout .section.vertical-ad-container {
+float: left;
+width: 55%;
+}
+body#layout .sidebar-container {
+display: inline-block;
+width: 39%;
+}
+body#layout .centered-bottom:after {
+clear: both;
+content: "";
+display: table;
+}
+body#layout .hamburger-menu,
+body#layout .search {
+display: none;
+}

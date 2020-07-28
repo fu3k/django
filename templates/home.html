@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title%}
+<title>Home</title>
+{% endblock %}
+
+{% block body%}
+<body>
+    <div class="navbar">
+        <a class="active" href="home"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> 
+        <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+
+        {% if user.is_authenticated %} 
+            hello {{user.first_name}}
+            <a href="acc/logout"><i class="fa fa-fw fa-logout"></i> logout</a>
+        {% else %}
+            <a href="acc/register"><i class="fa fa-fw fa-register"></i> Sign-up</a> 
+            <a href="acc/login"><i class="fa fa-fw fa-user"></i> Login</a>
+        {% endif %}
+            <a href="admin"><i class="fa fa-fw fa-user"></i> Admin</a>
+      </div>
+    
+    <a href="add">Add two numbers</a><br/>
+    <a href="tech">techie</a><br/>
+    <a href="polls">Polls</a><br/>
+
+</body>
+{% endblock%}
